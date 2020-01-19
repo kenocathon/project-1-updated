@@ -1,0 +1,27 @@
+/**********************************
+***********************************
+    Mixins
+***********************************
+**********************************/
+@mixin xs-screens {
+  @media only screen and (max-width: $xs-screens) {
+    @content;
+  }
+}
+
+@mixin small-screens {
+  @media only screen and (max-width: $small-screens) {
+    @content;
+  }
+}
+
+@mixin medium-screens {
+  @media only screen and (max-width: $medium-screens - 0.0625) {
+    @content;
+  }
+}
+@mixin large-screens {
+  @media only screen and (min-width: $medium-screens) {
+    @content;
+  }
+}
