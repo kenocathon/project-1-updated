@@ -366,16 +366,16 @@ textarea {
 
 /**********************************
 ***********************************
-    Mixins
-***********************************
-**********************************/
-/**********************************
-***********************************
     Variables
 ***********************************
 **********************************/
 /* Colors */
 /* Screen Sizes */
+/**********************************
+***********************************
+    Mixins
+***********************************
+**********************************/
 /**********************************
 ***********************************
     Base Styles
@@ -495,20 +495,10 @@ a {
   justify-content: space-evenly;
   align-items: center;
   padding: 5em 0; }
-  @media only screen and (max-width: 52em) {
-    .featured-content {
-      flex-direction: column;
-      flex-wrap: wrap; } }
   .featured-content .feature-wrap {
     flex-basis: 27%;
     text-align: center; }
-    @media only screen and (max-width: 52em) {
-      .featured-content .feature-wrap {
-        flex: 1;
-        width: 50%;
-        margin-bottom: 1em; } }
 
-/*Footer Section*/
 footer {
   text-align: center;
   background-color: #414042;
