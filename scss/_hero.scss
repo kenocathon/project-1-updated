@@ -1,0 +1,82 @@
+/*hero section*/
+
+.hero {
+  height: 40vh;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  background: black;
+  text-align: center;
+  padding-top: 1em;
+  padding-bottom: 0.5em;
+  h1 {
+    color: #fff;
+    position: relative;
+    z-index: 2;
+    padding: 0.3em 0;
+    font-family: "Hind", sans-serif;
+    font-size: 3.5em;
+    color: white;
+    letter-spacing: 0.2em;
+    font-weight: 700;
+    @include medium-screens {
+      font-size: 3em;
+      letter-spacing: 0.1em;
+    }
+    @include small-screens {
+      font-size: 2.5em;
+      letter-spacing: 0.05em;
+    }
+  }
+  h2 {
+    color: #fff;
+    padding-bottom: 3em;
+    font-family: "Hind", sans-serif;
+    font-size: 2em;
+    letter-spacing: 0.2em;
+    font-weight: 600;
+  }
+}
+
+.hero-image {
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 40vh;
+  opacity: 0.2;
+}
+.hero-content {
+  padding-top: 1em;
+}
+
+/*Below Hero Section*/
+
+.under-hero {
+  background: #000;
+  height: 100%;
+  padding: 1em 0;
+  position: relative;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  @include small-screens() {
+    flex-direction: column;
+  }
+  .phone-number {
+    color: white;
+  }
+}
+.redbtn {
+  padding: 0.8em 2em;
+  border: none;
+  border-radius: 20px;
+  background-color: $red;
+  color: $light-color;
+  transition: all 0.2s ease 0s;
+  cursor: pointer;
+  &:hover {
+    background-color: $gray;
+    border: 1px solid $red;
+  }
+}

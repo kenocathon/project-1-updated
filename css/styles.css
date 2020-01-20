@@ -364,46 +364,8 @@ textarea {
   font: inherit;
   /* 2 */ }
 
-/**********************************
-***********************************
-    Variables
-***********************************
-**********************************/
 /* Colors */
 /* Screen Sizes */
-/**********************************
-***********************************
-    Mixins
-***********************************
-**********************************/
-/**********************************
-***********************************
-    Base Styles
-***********************************
-**********************************/
-header {
-  width: 100%;
-  background-color: #000000; }
-  header img {
-    width: 6em; }
-
-a {
-  text-decoration: none;
-  color: #000000; }
-
-/**********************************
-***********************************
-    Layout Styles
-***********************************
-**********************************/
-/*header section*/
-.header-wrapper {
-  width: 90%;
-  margin: 0 auto;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center; }
-
 .menu-nav {
   list-style-type: none;
   position: relative; }
@@ -417,10 +379,10 @@ a {
   display: block;
   padding: 1em 2em;
   transition: all 0.2s ease 0s; }
-  @media only screen and (min-width: 64em) {
+  @media only screen and (min-width: 65em) {
     .menu-nav li a {
       font-size: 1em; } }
-  @media only screen and (max-width: 63.9375em) {
+  @media only screen and (max-width: 64.9375em) {
     .menu-nav li a {
       font-size: 0.8em;
       padding: 1em 1.5em; } }
@@ -433,34 +395,74 @@ a {
   border: none;
   border-radius: 20px; }
 
-.logo {
-  margin-right: auto;
-  padding: 2em 0; }
+@media only screen and (max-width: 52em) {
+  .menu-btn {
+    position: absolute;
+    z-index: 3;
+    right: 35px;
+    top: 35px;
+    cursor: pointer;
+    /*Rotate Into X With Menu Lines*/ }
+    .menu-btn .btn-line {
+      width: 28px;
+      height: 3px;
+      margin: 0 0 5px 0;
+      background-color: white; }
+    .menu-btn.close {
+      transform: rotate(180deg); }
+      .menu-btn.close .btn-line:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px); }
+      .menu-btn.close .btn-line:nth-child(2) {
+        opacity: 0; }
+      .menu-btn.close .btn-line:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -6px); } }
 
 /*hero section*/
 .hero {
-  height: 100%;
+  height: 40vh;
   width: 100%;
   overflow: hidden;
   position: relative;
   background: black;
   text-align: center;
-  padding-bottom: 1em; }
+  padding-top: 1em;
+  padding-bottom: 0.5em; }
   .hero h1 {
     color: #fff;
     position: relative;
     z-index: 2;
-    padding: 1em 0; }
+    padding: 0.3em 0;
+    font-family: "Hind", sans-serif;
+    font-size: 3.5em;
+    color: white;
+    letter-spacing: 0.2em;
+    font-weight: 700; }
+    @media only screen and (max-width: 64.9375em) {
+      .hero h1 {
+        font-size: 3em;
+        letter-spacing: 0.1em; } }
+    @media only screen and (max-width: 52em) {
+      .hero h1 {
+        font-size: 2.5em;
+        letter-spacing: 0.05em; } }
   .hero h2 {
     color: #fff;
-    padding-bottom: 3em; }
+    padding-bottom: 3em;
+    font-family: "Hind", sans-serif;
+    font-size: 2em;
+    letter-spacing: 0.2em;
+    font-weight: 600; }
 
 .hero-image {
   position: absolute;
   left: 0;
   right: 0;
   width: 100%;
-  opacity: 0.3; }
+  height: 40vh;
+  opacity: 0.2; }
+
+.hero-content {
+  padding-top: 1em; }
 
 /*Below Hero Section*/
 .under-hero {
@@ -489,15 +491,60 @@ a {
     background-color: #414042;
     border: 1px solid #c61b1e; }
 
+@font-face {
+  font-family: "OptimusPrincepsSemiBold";
+  src: url("../fonts/OptimusPrincepsSemiBold.ttf"); }
+
+/**********************************
+***********************************
+    Base Styles
+***********************************
+**********************************/
+header {
+  width: 100%;
+  background-color: #000000; }
+  header img {
+    width: 6em; }
+
+a {
+  text-decoration: none;
+  color: #000000; }
+
+/**********************************
+***********************************
+    Layout Styles
+***********************************
+**********************************/
+/*header section*/
+.header-wrapper {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center; }
+
+.logo {
+  margin-right: auto;
+  padding: 2em 0; }
+
 /*Main Content*/
 .featured-content {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   padding: 5em 0; }
+  @media only screen and (max-width: 52em) {
+    .featured-content {
+      flex-direction: column;
+      justify-content: space-around; } }
   .featured-content .feature-wrap {
     flex-basis: 27%;
     text-align: center; }
+    @media only screen and (max-width: 52em) {
+      .featured-content .feature-wrap {
+        flex: 1;
+        flex-wrap: wrap;
+        width: 50%; } }
 
 footer {
   text-align: center;
